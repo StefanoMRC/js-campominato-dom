@@ -3,7 +3,7 @@ let griglia = document.getElementById("griglia")
 let bombeTot=[]
 let bombe=[]
 let array =[]
-
+let punteggio=[]
 
 btn.addEventListener("click", function () {
     let difficolta = document.getElementById("difficolta").value;
@@ -14,6 +14,7 @@ btn.addEventListener("click", function () {
     array=[]
     bombeTot=[]
     bombe=[]
+    let punteggio=[]
 
     if(difficolta=="1"){
         numeroCelle=100
@@ -45,7 +46,7 @@ btn.addEventListener("click", function () {
     }
     console.log(`le 16 bombe sono ${bombe}`)
     // fine array bombe
-
+   
     for(i=0; i<numeroCelle;i++){
         let box = document.createElement("div")
         griglia.appendChild(box);
@@ -58,21 +59,29 @@ btn.addEventListener("click", function () {
         }
         box.innerHTML=array[i]
         griglia.appendChild(box);
+        let bombaTrovata=false
        
-
 
 
         box.addEventListener("click", function(){
             console.log(this.innerText)
+            
+            punteggio.push(this.innerText)
+            console.log(punteggio)
+            let risultato=document.getElementById("punteggio")
             if(bombe.includes(parseInt(this.innerText))){
                 this.classList.add("bg_bomba")
-                box.removeEventListener("click", function(){
-                    
-                })
-            } else{
+                bombaTrovata=true
+                risultato.innerHTML=`Il tuo punteggio è ${punteggio.length}`
+            }else if(punteggio.length ==10){
+                risultato.innerHTML=`Complimenti hai vinto!!`
+            } 
+             else{
                 this.classList.add("bg_box")
             }
         })
+       
+        
     }    
 })
 

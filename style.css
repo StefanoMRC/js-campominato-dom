@@ -102,3 +102,8 @@ footer{
 .credits span{
     color: red ;
 }
+ #punteggio{
+     font-size: 2em;
+     text-align: center;
+     padding: 30px;
+ }
