@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head{
+    display: flex;
+    height: 10vh;
+}
+.logo{
+    height: 50px;
+    margin-right: 10px;
+}
+.cont{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    margin-right: 10px;
+    font-size: 2em;
+}
+
+#difficolta{
+    height: 30px;
+    width: 100px;
+    font-size: 1.1em;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+#btn{
+    padding: 5px 20px;
+    border-radius: 15px;
+}
+main{
+    background-color: aquamarine;
+    height: calc(100vh - 20vh);
+    padding-top: 150px;
+}
+#griglia{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bg_box{
+    background-color: rgba(100,149,237,255);
+    color: white;
+}
+.bg_bomba{
+    background-color: red;
+    color: white;
+}
+.box1{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+}
+.box2{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+}
+.box3{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+}
+.box1, .box2, .box3:hover{
+    cursor: pointer;
+}
+footer{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.credits{
+    width: 60%;
+    margin: auto;
+    font-size: 2em;
+}
+.credits a{
+    color: rgba(100,149,237,255);
+}
+.credits span{
+    color: red ;
+}
