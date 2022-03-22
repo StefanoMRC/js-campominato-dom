@@ -15,7 +15,10 @@ btn.addEventListener("click", function () {
     bombeTot=[]
     bombe=[]
     let punteggio=[]
+    let risultato=document.getElementById("punteggio")
+    risultato.innerHTML=""
 
+    
     if(difficolta=="1"){
         numeroCelle=100
     }else if(difficolta=="2"){
@@ -68,7 +71,7 @@ btn.addEventListener("click", function () {
             
             punteggio.push(this.innerText)
             console.log(punteggio)
-            let risultato=document.getElementById("punteggio")
+            
             if(bombe.includes(parseInt(this.innerText))){
                 this.classList.add("bg_bomba")
                 bombaTrovata=true
