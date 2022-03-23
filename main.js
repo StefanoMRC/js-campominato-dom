@@ -75,7 +75,7 @@ btn.addEventListener("click", function () {
             if(bombe.includes(parseInt(this.innerText))){
                 this.classList.add("bg_bomba")
                 bombaTrovata=true
-                risultato.innerHTML=`Il tuo punteggio è ${punteggio.length}`
+                risultato.innerHTML=`Il tuo punteggio è ${punteggio.length -1}`
             }else if(punteggio.length ==10){
                 risultato.innerHTML=`Complimenti hai vinto!!`
             } 
